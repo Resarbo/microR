@@ -1,0 +1,28 @@
+package com.restaurante.service.servicio;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.restaurante.service.entidades.Restaurante;
+import com.restaurante.service.repositorio.RestauranteRepository;
+
+@Service
+public class RestauranteService {
+	@Autowired
+	private RestauranteRepository restauranteRepository;
+	
+	public List<Restaurante> getAll() {
+		return restauranteRepository.findAll();
+	}
+
+	public Restaurante getRestauranteById(int id) {
+		return restauranteRepository.findById(id).orElse(null);
+	}
+
+	public Restaurante saveRestaurante(Restaurante restaurante) {
+		Restaurante nuevoRestaurante = restauranteRepository.save(restaurante);
+		return nuevoRestaurante;
+	}
+}

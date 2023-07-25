@@ -1,0 +1,5 @@
+package com.empleados.service.repositorio;
+
+public interface EmpleadoRepository {
+
+}

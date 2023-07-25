@@ -1,0 +1,5 @@
+package com.restaurante.service.entidades;
+
+public class Restaurante {
+
+}

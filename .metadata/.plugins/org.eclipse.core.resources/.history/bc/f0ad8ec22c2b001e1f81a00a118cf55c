@@ -1,0 +1,5 @@
+package com.empleados.service.entidades;
+
+public class Empleado {
+
+}

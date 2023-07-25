@@ -1,0 +1,5 @@
+package com.platos.service.entidades;
+
+public class Plato {
+
+}
