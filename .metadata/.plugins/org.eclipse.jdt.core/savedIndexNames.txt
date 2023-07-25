@@ -6,7 +6,6 @@ INDEX VERSION 1.132+C:\Users\LENOVO\OneDrive\Documentos\UTP\Sistemas Distribuido
 1865797976.index
 4049063238.index
 3396823703.index
-3086022969.index
 3375332096.index
 2278166013.index
 2257821720.index
