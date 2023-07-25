@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.restaurante.service.modelos.Empleado;
 
-@FeignClient(name = "empleados-service", url= "http://localhost:8002")
+@FeignClient(name = "empleados-service")
 public interface EmpleadoFeignClient {
 	@PostMapping("/empleado")
 	public Empleado save(@RequestBody Empleado empleado);

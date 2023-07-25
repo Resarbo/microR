@@ -1,0 +1,30 @@
+server:
+  port: 8080
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: restaurante-service
+          uri: lb://restaurante-service
+          predicates:
+            - Path=/restaurante/**
+        - id: empleados-service
+          uri: lb://empleados-service
+          predicates:
+            - Path=/empleados/**
+        - id: platos-service
+          uri: lb://platos-service
+          predicates:
+            - Path=/platos/**

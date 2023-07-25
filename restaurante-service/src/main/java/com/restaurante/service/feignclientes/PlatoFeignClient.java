@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.restaurante.service.modelos.Plato;
 
-@FeignClient(name = "platos-service", url= "http://localhost:8003")
+@FeignClient(name = "platos-service")
 public interface PlatoFeignClient {
 	@PostMapping("/plato")
 	public Plato save(@RequestBody Plato plato);
